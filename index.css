@@ -29,6 +29,7 @@ body{
     font-size: var(--step--2);
     font-family: var(--Fraunces);
     color: var(--darkgrayishblue);
+   
 }
 
    
@@ -40,6 +41,7 @@ body{
     flex-wrap: wrap;
     margin: 2em;
     flex: 5 2 auto;
+    margin-top: 3em;
   
 }
 img{
@@ -51,31 +53,44 @@ img{
 .info{
     display: block;
     background-color: var(--White);
+    padding: var(--step-1);
 
 }
 h1{
    letter-spacing: 1.2em;
+   padding-block: 1em;
+   
+   
 }
 h2{
     font-size: var(--step-2);
     color: var(--verydarkblue);
+    padding-block: 0.5em;
+    
 }
 p{
     font-size: var(--step--1);
+    padding-block: 1em;
+    line-height: 1.5em;
+   
 
 }
 .prices{
     display: flex;
-    
+    justify-content: space-between;
+    padding-block: 2em;
+  
 }
 .newPrice{
     color: var(--Darkcyan);
     font-size: var(--step-3);
+   
 
 }
 .oldPrice{
     text-decoration: line-through;
     font-size: var(--step--1);
+    align-self: center;
 }
 button{
     background-color: var(--Darkcyan);
@@ -88,6 +103,7 @@ button{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-inline: auto;
 }
 button:hover {
     background-color: var(--verydarkblue);
