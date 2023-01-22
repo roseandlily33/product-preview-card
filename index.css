@@ -48,7 +48,6 @@ img{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     max-width: 100%;
-    
 }
 .info{
     display: block;
@@ -103,11 +102,12 @@ button{
     justify-content: center;
     flex-direction: row;
     margin-inline: auto;
+    width: 100%;
 }
 button:hover {
     background-color: var(--verydarkblue);
 }
-@media screen and (min-width: 700px){
+@media screen and (min-width: 750px){
     .container{
         display: flex;
         flex-direction: row;
@@ -121,11 +121,16 @@ button:hover {
         border-bottom-left-radius: 5px;
         border-top-right-radius: 0px;
         width: 50%;
+
     }
     .info{
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
 
+    }
+    button{
+        max-width: 50%;
+        border-radius: 15px;
     }
    
 }
