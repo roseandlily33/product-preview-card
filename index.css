@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+@link https://utopia.fyi/type/calculator?c=320,15,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12;
 
-* {
-    padding: o;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 :root {
     --verydarkblue: hsl(212, 21%, 14%);
@@ -14,9 +10,99 @@
     --Cream: hsl(30, 38%, 92%);
     --Fraunces: 'Fraunces', serif;
     --Mont: 'Montserrat', sans-serif;
+    --step--2: clamp(0.65rem, calc(0.60rem + 0.26vw), 0.80rem);
+    --step--1: clamp(0.78rem, calc(0.71rem + 0.38vw), 1.00rem);
+    --step-0: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
+    --step-1: clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem);
+    --step-2: clamp(1.35rem, calc(1.14rem + 1.05vw), 1.95rem);
+    --step-3: clamp(1.62rem, calc(1.33rem + 1.43vw), 2.44rem);
+    --step-4: clamp(1.94rem, calc(1.56rem + 1.93vw), 3.05rem);
+    --step-5: clamp(2.33rem, calc(1.82rem + 2.58vw), 3.82rem);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: var(--Cream);
-    font-size: 15px;
+    font-size: var(--step--2);
     font-family: var(--Fraunces);
+    color: var(--darkgrayishblue);
+}
+
+   
+.container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em;
+    flex: 5 2 auto;
+  
+}
+img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 100%;
+    
+}
+.info{
+    display: block;
+    background-color: var(--White);
+
+}
+h1{
+   letter-spacing: 1.2em;
+}
+h2{
+    font-size: var(--step-2);
+    color: var(--verydarkblue);
+}
+p{
+    font-size: var(--step--1);
+
+}
+.prices{
+    display: flex;
+    
+}
+.newPrice{
+    color: var(--Darkcyan);
+    font-size: var(--step-3);
+
+}
+.oldPrice{
+    text-decoration: line-through;
+    font-size: var(--step--1);
+}
+button{
+    background-color: var(--Darkcyan);
+    color: var(--Cream);
+    font-size: var(--step-1);
+    border: none;
+    border-radius: 15px;
+    padding: 1em 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+button:hover {
+    background-color: var(--verydarkblue);
+}
+
+
+
+@media screen and (max-width){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        width: 50%;
+    }
+    img{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0;
+    }
 }
